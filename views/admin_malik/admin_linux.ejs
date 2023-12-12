@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+<head>
+<link rel="stylesheet" href="/css/style.css" />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Paste this css to your style sheet file or under head tag */
+  /* This only works with JavaScript, 
+  if it's not present, don't show loader */
+ 
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script>
+    //paste this code under head tag or in a seperate js file.
+    // Wait for window load
+    $(window).load(function() {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");;
+    });
+  </script>
+
+<script>
+  $(document).ready(function () {
+           setTimeout(function () {
+                
+                 $('a[href]#no-link').each(function () {
+                     var href = this.href;
+     
+                     $(this).removeAttr('href').css('cursor', 'pointer').click(function () {
+                         if (href.toLowerCase().indexOf("#") >= 0) {
+     
+                         } else {
+                             window.open(href, '_blank');
+                         }
+                     });
+                 });
+     
+           }, 500);
+     }); 
+   </script>
+<style>
+  body
+  {
+    background-color:rgb(243, 240, 240);
+  }
+  option:hover{background-color:#fb6340;
+  color: #FFF;
+;}
+.linux{
+  background-color: #fb6340;
+  color: #FFF;
+}
+
+</style>
+
+
+<title>Malik</title>
+</head>
+
+<body>
+  <div class="se-pre-con" ></div>
+  
+  <div style="background-color:#FFF; width:980px; margin:0px auto;">
+<div class="head">
+<div style="width:980px; padding-bottom:0px;;background-color:#fff; border-radius:0px
+;">
+<img style="margin-left:30px;margin-top:15px;float:left;" src="/img/10.png" />
+
+<div  style="float:left;margin:25px 0px 0px 15px;width:425px; border-radius:10px; background:#FFF;border:solid thin #fb6340 ">
+<form method="POST" action="../admin_malik/admin_search">
+<input id="search" name="title" autocomplete="off" type="text" placeholder="Enter Keyword to Search" style="font-size:18px;width:245px; height:20px;border-radius:5px;border:none;padding:8px;margin-left:5px;float: left;" required />
+
+<div class="custom-select" style="float: left;width:80px;">
+<select 
+ class="select"  style="border:solid thin #fb6340;width:100px;font-size: 16px;font-weight: bold;height: 38px; border-top: none;border-bottom: none;" name="type" required >
+
+  <option value="">Type</option>
+<option>Windows</option>  
+      <option>Linux</option>  
+      <option>Mac</option>  
+      <option>APK</option> 
+</select>
+</div>
+<input style="float: left;margin:10px 0px 0px 23px;" type="submit" class="submit" value=" " />
+</form>
+
+</div>
+
+<div style="float:left;color:#fff;font-size:16px;font-weight:bold;
+margin:10px 0px 0px 15px;">
+
+<a style="float: left; margin: 0px 0px 5px 30px;" href="#"><img src="/img/you.png" width="35px" height="35px"></a>
+<a class="social"  href="#"><img src="/img/g.png" width="35px" height="35px" ></a>
+<a class="social"  href="#"><img src="/img/fb.png" width="35px" height="35px" ></a>
+<a class="social"  href="#"><img src="/img/t.png" width="35px" height="35px"></a>
+<a  class="social" href="#"><img src="/img/l.png" width="35px" height="35px" ></a>
+<a class="social"  href="#"><img src="/img/w.png" width="35px" height="35px" ></a>
+<p class="p" style="clear: both; font-size: 14px; font-weight: bold; color: #000;padding: 5px;border-radius: 10px; ">For Custom Software Support: 347-874-1697</p>
+
+</div>
+
+<div style="clear: both;"></div>
+</div>
+
+
+
+  <div style="float: left; font-size: 16px; font-weight: bold;margin-left: 40px; margin-top: 0px;">
+    <div style="width:400px;margin:10px 0px 10px 5px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+      Welcom to Admin Login Panel
+      </div>
+
+  
+  </div>
+<div style="float: right; margin-right: 30px; margin-top: -10px;">
+<ul>
+  <li><a href="logout">Logout</a></li>
+</ul>
+</div>
+<div style="clear: both;"></div>
+
+<div class="menu">
+  <div style="width:650px;margin:10px auto;">
+    <ul>
+  
+      <li style="margin-left: 10px;"><a class="ad" href="ad_papular_soft" >Ad Softwares</a></li>
+     
+      <li><a class="papu" href="admin_papular"> Papular</a></li>
+  
+    <li><a class="windows" href="admin_windows"> Windows</a></li>
+    <li><a class="mac" href="admin_mac"> Mac</a></li>
+    <li><a class="linux" href="admin_linux">Linux</a></li>
+    
+    <li><a class="android" href="admin_android">Android</a></li>
+    <li><a class="logs" href="logs">Logs</a></li>
+     
+    </ul>
+  
+  </div>
+  </div>
+  <div class="content" >
+    <div style="width:350px;margin:10px 0px 10px 20px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+  Papular Windows Softwares
+  </div>
+  <div style="font-size: 16px;font-weight: bold; margin: 5px 0px 5px 30px;color: #a8a6a4;">Total Record:(<%=Papular.length%>)</div>
+  <div style="width: 900px; margin:0px  auto; ">
+    <%if(Papular.length!=0) {%>
+  <div  style="width: 900px;float:left;font-weight: bold; background-color: #FFF;">
+    <% for(var i=0 ; i < Papular.length; i++) { %>
+         <div style="margin: 10px; padding-bottom: 5px; border:solid thin #fb6340; border-left:none;border-right:none;border-top:none;">
+         <img style="float: left;" src="../<%= Papular[i].Icon %>" width=45px height=45px>
+         <p class="papular"><%= Papular[i].Title %> (<%=Papular[i].Version%>)</p>
+         
+         <div style="float: right;margin-top: 10px;">
+          
+          <form action="../delete_record" method="POST">
+          <input type="hidden" name="type" value="Linux">
+          <input type="hidden" name="id" value="<%=Papular[i].id%>" >
+          <input class="delete" style="margin-top: 0px; width: 150px;" type="submit" value="Click to Delete"> 
+          
+         </form>
+        </div>
+         
+        <div style="float: right;margin-top: 10px;">
+          
+          <form action="../admin_malik/admin_update" method="POST">
+          <input type="hidden" name="type" value="Linux">
+          <input type="hidden" name="id" value="<%=Papular[i].id%>" >
+          <input class="edit" style="margin-top: 0px; width: 150px;" type="submit" value="Click to Edit"> 
+          
+         </form>
+        </div>
+         
+        
+        <div style="clear: both;"></div>
+         <div style="clear: both;margin: 5px 0px 0px 20px;color:#a8a6a4;">(<%=Papular[i].Date%>)</div> 
+        </div>
+  
+  
+      <% } %>
+      <%} else {%>
+        <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+          <div style="font-size: 60px;">Oops!</div>
+          <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found!</div>
+          <div"><img src="../img/cry.gif" width="200px" height="200px"></div>
+          <div style="clear: both;color: red;"> </div>
+          </div>
+      <% } %>
+      
+  </div>
+  <div style="clear: both;margin-top: 100px;"></div>
+  </div>

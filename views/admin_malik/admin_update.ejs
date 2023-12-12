@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+<head>
+<link rel="stylesheet" href="/css/style.css" />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Paste this css to your style sheet file or under head tag */
+  /* This only works with JavaScript, 
+  if it's not present, don't show loader */
+  img{
+    width: 80px;
+    height: 80px;
+  }
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script>
+    //paste this code under head tag or in a seperate js file.
+    // Wait for window load
+    $(window).load(function() {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");;
+    });
+  </script>
+
+<script>
+  $(document).ready(function () {
+           setTimeout(function () {
+                
+                 $('a[href]#no-link').each(function () {
+                     var href = this.href;
+     
+                     $(this).removeAttr('href').css('cursor', 'pointer').click(function () {
+                         if (href.toLowerCase().indexOf("#") >= 0) {
+     
+                         } else {
+                             window.open(href, '_blank');
+                         }
+                     });
+                 });
+     
+           }, 500);
+     }); 
+   </script>
+<style>
+  body
+  {
+    background-color:rgb(243, 240, 240);
+  }
+  option:hover{background-color:#fb6340;
+  color: #FFF;
+;}
+
+</style>
+<script src="../jquery-3.3.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../jquery.form.min.js"></script>
+
+<script>
+    
+  function ValidateSingleInput(oInput) {
+    var _validFileExtensions = [".jpg", ".jpeg", ".png"];
+      if (oInput.type == "file") {
+          var sFileName = oInput.value;
+           if (sFileName.length > 0) {
+              var blnValid = false;
+              for (var j = 0; j < _validFileExtensions.length; j++) {
+                  var sCurExtension = _validFileExtensions[j];
+                  if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                      blnValid = true;
+                      break;
+                  }
+              }
+               
+              if (!blnValid) {
+                  alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                  oInput.value = "";
+                  return false;
+              }
+          }
+    }
+      return true;
+  }
+  </script>
+<title>Malik</title>
+</head>
+
+<body>
+  <div class="se-pre-con" ></div>
+  
+  <div style="background-color:#FFF; width:980px; margin:0px auto;">
+<div class="head">
+<div style="width:980px; padding-bottom:0px;;background-color:#fff; border-radius:0px
+;">
+<img style="margin-left:30px;margin-top:15px;float:left;" src="/img/10.png" />
+
+<div  style="float:left;margin:25px 0px 0px 15px;width:425px; border-radius:10px; background:#FFF;border:solid thin #fb6340 ">
+<form method="POST" action="../admin_malik/admin_search">
+<input id="search" name="title" autocomplete="off" type="text" placeholder="Enter Keyword to Search" style="font-size:18px;width:245px; height:20px;border-radius:5px;border:none;padding:8px;margin-left:5px;float: left;" required />
+
+<div class="custom-select" style="float: left;width:80px;">
+<select 
+ class="select"  style="border:solid thin #fb6340;width:100px;font-size: 16px;font-weight: bold;height: 38px; border-top: none;border-bottom: none;" name="type" required >
+
+  <option value="">Type</option>
+<option>Windows</option>  
+      <option>Linux</option>  
+      <option>Mac</option>  
+      <option>APK</option> 
+</select>
+</div>
+<input style="float: left;margin:10px 0px 0px 23px;" type="submit" class="submit" value=" " />
+</form>
+
+</div>
+
+<div style="float:left;color:#fff;font-size:16px;font-weight:bold;
+margin:10px 0px 0px 15px;">
+
+<a style="float: left; margin: 0px 0px 5px 30px;" href="#"><img src="/img/you.png" width="35px" height="35px"></a>
+<a class="social"  href="#"><img src="/img/g.png" width="35px" height="35px" ></a>
+<a class="social"  href="#"><img src="/img/fb.png" width="35px" height="35px" ></a>
+<a class="social"  href="#"><img src="/img/t.png" width="35px" height="35px"></a>
+<a  class="social" href="#"><img src="/img/l.png" width="35px" height="35px" ></a>
+<a class="social"  href="#"><img src="/img/w.png" width="35px" height="35px" ></a>
+<p class="p" style="clear: both; font-size: 14px; font-weight: bold; color: #000;padding: 5px;border-radius: 10px; ">For Custom Software Support: 347-874-1697</p>
+
+</div>
+
+<div style="clear: both;"></div>
+</div>
+
+
+
+  <div style="float: left; font-size: 16px; font-weight: bold;margin-left: 40px; margin-top: 0px;">
+    <div style="width:400px;margin:10px 0px 10px 5px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+      Welcom to Admin Login Panel
+      </div>
+
+  
+  </div>
+  
+<div style="float: right; margin-right: 30px; margin-top: -10px;">
+  
+<ul>
+  <li><a href="logout">Logout</a></li>
+</ul>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="menu">
+  <div style="width:650px;margin:10px auto;">
+    <ul>
+  
+      <li style="margin-left: 10px;"><a class="ad" href="/admin_malik/ad_papular_soft" >Ad Softwares</a></li>
+     
+      <li><a class="papu" href="/admin_malik/admin_papular"> Papular</a></li>
+  
+    <li><a class="windows" href="/admin_malik/admin_windows"> Windows</a></li>
+    <li><a class="mac" href="/admin_malik/admin_mac"> Mac</a></li>
+    <li><a class="linux" href="/admin_malik/admin_linux">Linux</a></li>
+    
+    <li><a class="android" href="/admin_malik/admin_android">Android</a></li>
+    
+    <li><a class="logs" href="logs">Logs</a></li>
+    </ul>
+  
+  </div>
+  </div>
+
+
+
+
+
+  
+  <div style="width:300px;margin:10px 0px 10px 65px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+    Update Softwares Details
+    </div>
+    <div style="width: 600px; margin: 10px auto; text-align: center;">
+     <%if(Data.length!=0){%>
+   
+      <div class="success" style="width: 600px;"><%= Data %></div>
+     <%}%>
+    </div>
+    <% if(Type=="Windows") {%>
+  <div style="width:500px; float: left; margin: 0px 0px 0px 70px; ">
+    <form class="form" action="../admin_record_update" method="post"   style="border:solid thin #fb6340;margin:0px auto;padding: 40px 0px 50px 50px; margin-bottom: 40px;">
+
+  <div class="form-field">
+    
+    <input class="input" placeholder="Enter Title" type="text" class="form-control" name="title" value="<%=Found[0].Title%>" required>
+    </div>
+   <div class="form-field">
+    
+    <input class="input" placeholder="Enter Version" type="text" class="form-control" name="version" value="<%=Found[0].Version%>" required>
+   </div>
+   <div class="form-field">
+    
+    <input class="input" placeholder="Enter Size in MB" type="text" class="form-control" name="size" value="<%=Found[0].Size%>" required>
+  </div>
+  <div class="form-field">
+    
+    <input class="input" placeholder="Enter Google File link" type="text" class="form-control" value="<%=Found[0].Path%>" name="link" required>
+  </div>
+ 
+  <input type="hidden" name="id" value="<%=Found[0].id%>">
+  <input type="hidden" name="type" value="Windows">
+  <button id="submitButton" name='btnSubmit' type="submit" class="delete">Submit</button>
+</form>
+</div>
+
+  <div style="width:300px; float: left; margin:45px 0px 0px 20px; border:solid thin #fb6340;text-align: center;padding: 50px 0px 50px 0px;border-radius:20px 150px 20px 150px;">
+  
+    <img style="margin-bottom: 10px;" src="../<%=Found[0].Icon%>">
+    
+    <form action="../icon_update" enctype="multipart/form-data" method="POST">
+      <input type="hidden" name="id" value="<%=Found[0].id%>">
+      <input type="hidden" name="type" value="Windows">
+      <input style="width: 200px;" class="input" type="file" name="img" onchange="ValidateSingleInput(this)" required>
+      <input class="delete" style="width: 150px;" type="submit" value="Click to Update">
+    </form>
+
+
+
+  </div>
+  <div style="clear: both;"></div>
+    <%} else if(Type=="Mac") {%>
+      <div style="width:500px; float: left; margin: 0px 0px 0px 70px; ">
+        <form class="form" action="../admin_record_update" method="post"   style="border:solid thin #fb6340;margin:0px auto;padding: 40px 0px 50px 50px; margin-bottom: 40px;">
+    
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Title" type="text" class="form-control" name="title" value="<%=Found[0].Title%>" required>
+        </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Version" type="text" class="form-control" name="version" value="<%=Found[0].Version%>" required>
+       </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Size in MB" type="text" class="form-control" name="size" value="<%=Found[0].Size%>" required>
+      </div>
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Google File link" type="text" class="form-control" value="<%=Found[0].Path%>" name="link" required>
+      </div>
+     
+      <input type="hidden" name="id" value="<%=Found[0].id%>">
+      <input type="hidden" name="type" value="Mac">
+      <button id="submitButton" name='btnSubmit' type="submit" class="delete">Submit</button>
+    </form>
+    </div>
+    
+      <div style="width:300px; float: left; margin:45px 0px 0px 20px; border:solid thin #fb6340;text-align: center;padding: 50px 0px 50px 0px;border-radius:20px 150px 20px 150px;">
+      
+        <img style="margin-bottom: 10px;" src="../<%=Found[0].Icon%>">
+        
+        <form action="../icon_update" enctype="multipart/form-data" method="POST">
+          <input type="hidden" name="id" value="<%=Found[0].id%>">
+          <input type="hidden" name="type" value="Mac">
+          <input style="width: 200px;" class="input" type="file" name="img" onchange="ValidateSingleInput(this)" required>
+          <input class="delete" style="width: 150px;" type="submit" value="Click to Update">
+        </form>
+    
+    
+    
+      </div>
+      <div style="clear: both;"></div>
+    
+    <%} else if(Type=="Linux") {%>
+      <div style="width:500px; float: left; margin: 0px 0px 0px 70px; ">
+        <form class="form" action="../admin_record_update" method="post"   style="border:solid thin #fb6340;margin:0px auto;padding: 40px 0px 50px 50px; margin-bottom: 40px;">
+    
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Title" type="text" class="form-control" name="title" value="<%=Found[0].Title%>" required>
+        </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Version" type="text" class="form-control" name="version" value="<%=Found[0].Version%>" required>
+       </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Size in MB" type="text" class="form-control" name="size" value="<%=Found[0].Size%>" required>
+      </div>
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Google File link" type="text" class="form-control" value="<%=Found[0].Path%>" name="link" required>
+      </div>
+     
+      <input type="hidden" name="id" value="<%=Found[0].id%>">
+      <input type="hidden" name="type" value="Linux">
+      <button id="submitButton" name='btnSubmit' type="submit" class="delete">Submit</button>
+    </form>
+    </div>
+    
+      <div style="width:300px; float: left; margin:45px 0px 0px 20px; border:solid thin #fb6340;text-align: center;padding: 50px 0px 50px 0px;border-radius:20px 150px 20px 150px;">
+      
+        <img style="margin-bottom: 10px;" src="../<%=Found[0].Icon%>">
+        
+        <form action="../icon_update" enctype="multipart/form-data" method="POST">
+          <input type="hidden" name="id" value="<%=Found[0].id%>">
+          <input type="hidden" name="type" value="Linux">
+          <input style="width: 200px;" class="input" type="file" name="img" onchange="ValidateSingleInput(this)" required>
+          <input class="delete" style="width: 150px;" type="submit" value="Click to Update">
+        </form>
+    
+    
+    
+      </div>
+      <div style="clear: both;"></div>
+  
+    <%} else if(Type=="APK") {%>
+      <div style="width:500px; float: left; margin: 0px 0px 0px 70px; ">
+        <form class="form" action="../admin_record_update" method="post"   style="border:solid thin #fb6340;margin:0px auto;padding: 40px 0px 50px 50px; margin-bottom: 40px;">
+    
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Title" type="text" class="form-control" name="title" value="<%=Found[0].Title%>" required>
+        </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Version" type="text" class="form-control" name="version" value="<%=Found[0].Version%>" required>
+       </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Size in MB" type="text" class="form-control" name="size" value="<%=Found[0].Size%>" required>
+      </div>
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Google File link" type="text" class="form-control" value="<%=Found[0].Path%>" name="link" required>
+      </div>
+     
+      <input type="hidden" name="id" value="<%=Found[0].id%>">
+      <input type="hidden" name="type" value="APK">
+      <button id="submitButton" name='btnSubmit' type="submit" class="delete">Submit</button>
+    </form>
+    </div>
+    
+      <div style="width:300px; float: left; margin:45px 0px 0px 20px; border:solid thin #fb6340;text-align: center;padding: 50px 0px 50px 0px;border-radius:20px 150px 20px 150px;">
+      
+        <img style="margin-bottom: 10px;" src="../<%=Found[0].Icon%>">
+        
+        <form action="../icon_update" enctype="multipart/form-data" method="POST">
+          <input type="hidden" name="id" value="<%=Found[0].id%>">
+          <input type="hidden" name="type" value="APK">
+          <input style="width: 200px;" class="input" type="file" name="img" onchange="ValidateSingleInput(this)" required>
+          <input class="delete" style="width: 150px;" type="submit" value="Click to Update">
+        </form>
+    
+    
+    
+      </div>
+      <div style="clear: both;"></div>
+  
+    <%} else if(Type=="Papular") {%>
+      <div style="width:500px; float: left; margin: 20px 0px 0px 70px; ">
+        <form class="form" action="../admin_record_update" method="post"  style="border:solid thin #fb6340;margin:0px auto;padding: 40px 0px 50px 50px; margin-bottom: 40px;">
+    
+      <div class="form-field">
+        
+        <input class="input" placeholder="Enter Title" type="text" class="form-control" name="title" value="<%=Found[0].Title%>" required>
+        </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Version" type="text" class="form-control" name="version" value="<%=Found[0].Version%>" required>
+       </div>
+       <div class="form-field">
+        
+        <input class="input" placeholder="Enter Size in MB" type="text" class="form-control" name="size" value="<%=Found[0].Size%>" required>
+      </div>
+      
+     
+      <input type="hidden" name="id" value="<%=Found[0].id%>">
+      <input type="hidden" name="type" value="Papular">
+      <button id="submitButton" name='btnSubmit' type="submit" class="delete">Submit</button>
+    </form>
+    </div>
+    
+      <div style="width:300px; float: left; margin:35px 0px 0px 20px; border:solid thin #fb6340;text-align: center;padding: 50px 0px 50px 0px;border-radius:20px 150px 20px 150px;">
+      
+        <img style="margin-bottom: 10px;" src="../<%=Found[0].Icon%>">
+        
+        <form action="../icon_update" enctype="multipart/form-data" method="POST">
+          <input type="hidden" name="id" value="<%=Found[0].id%>">
+          <input type="hidden" name="type" value="Papular">
+          <input style="width: 200px;" class="input" type="file" name="img" onchange="ValidateSingleInput(this)" required>
+          <input class="delete" style="width: 150px;" type="submit" value="Click to Update">
+        </form>
+    
+    
+    
+      </div>
+      <div style="clear: both;"></div>
+  
+    <%}%>
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<style>
+  .papular{
+    float: left; margin: 15px 0px 0px 10px;
+     color: black;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #FFF;
+      border: none;
+      cursor: pointer;
+  }
+.papular:hover{
+	
+  color: #fb6340;
+}
+  .home{
+    background-color: #fb6340;
+    color: #FFF;
+  }
+
+</style>
+
+<div style="width:980px; margin: 0px auto;"> 
+  <p style="float: left;width:450px; margin:50px 0px 0px 50px;font-size: 22px; text-align: justify;">
+    All versions of<span style="color:#fb6340;"> cracked and
+    custom softwares</span> are available
+    for all OS on USAF.Com.PK, all 
+   softwares are tested and freely 
+   available without any payment 
+  </p>
+  <img style="float: left;width:380px;margin-left: 35px;" src="img/all_in2.png" width="950px" height="220px"  />
+  <div style="clear: both;">
+  </div>
+<div class="content">
+  <div style="width:300px;margin:0px 0px 10px 20px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+Papular Softwares
+</div>
+<div style="width: 900px; margin:0px  auto;">
+  <%if(Papular.length>=10) {%>
+<div  style="width: 420px;float:left;font-weight: bold;">
+  <% for(var i=0 ; i < 5; i++) { %>
+       <div style="margin: 10px; padding-bottom: 5px; border:solid thin #fb6340; border-left:none;border-right:none;border-top:none;">
+       <img style="float: left;" src="<%= Papular[i].Icon %>" width=45px height=45px>
+
+       <form action="download" method="post">
+
+       <input type="hidden" name="title" value="<%= Papular[i].Title %>">
+       <input class="papular" type="submit" value="<%= Papular[i].Title %> (<%=Papular[i].Version%>)">
+       <div style="clear: both;"></div>
+       
+      </form>
+      <div style="clear: both;margin: 5px 0px 0px 20px;color:#a8a6a4;">(<%=Papular[i].Date%>)</div> 
+    
+      </div>
+      
+
+    <% } %>
+  
+</div>
+<div  style="width: 420px;float:left;margin-left:40px;font-weight: bold;">
+  <% for(var i=5 ; i < Papular.length; i++) { %>
+       <div style="margin: 10px; padding-bottom: 5px; border:solid thin #fb6340; border-left:none;border-right:none;border-top:none;">
+       <img style="float: left;" src="<%= Papular[i].Icon %>" width=45px height=45px>
+       <form action="download" method="post">
+
+        <input type="hidden" name="title" value="<%= Papular[i].Title %>">
+        <input class="papular" type="submit" value="<%= Papular[i].Title %> (<%=Papular[i].Version%>)">
+        <div style="clear: both;"></div>
+       </form>
+       <div style="clear: both;margin: 5px 0px 0px 20px;color:#a8a6a4;">(<%=Papular[i].Date%>)</div> 
+       </div>
+
+
+    <% } %>
+  <div style="clear: both;margin-top: 100px;"></div>
+</div>
+</div>
+<%} else {%>
+  <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+    <div style="font-size: 60px;">Oops!</div>
+    <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found!</div>
+    <div"><img src="img/cry.gif" width="200px" height="200px"></div>
+    <div style="clear: both;color: red;"> </div>
+    </div>
+<% } %>
+</div>
+
+
+

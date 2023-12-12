@@ -1,0 +1,86 @@
+
+
+<div style="width:300px;margin:20px 0px 10px 65px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+  Welcome to Admin Login
+  </div>
+  
+<form id="regForm" class="form"  style="border:solid thin #fb6340;margin:40px auto;width:800px;">
+  
+  
+  <div style="width: 600px; margin: 0px auto; text-align: center;">
+  
+    <% for(var i=0 ; i < errors.length; i++) { %>
+      <div class="error" style="width: 600px;"><%= errors[i] %></div>
+      <% } %>
+    </div>
+    
+  <div style="width:500px; margin:0px auto;">
+  <div class="form-field">
+    
+    <input id="email"   class="input" placeholder="Enter Email Adddress" type="text" class="form-control" name="email" required>
+  </div>
+  <div class="form-field">
+    
+    <input id="password" class="input" placeholder="**************" type="password" class="form-control" name="pass" required>
+  </div>
+ 
+  
+  <button id="submitButton" name='btnSubmit' type="submit"  class="btn">Login</button>
+
+  <div class='progress' id="progressDivId">
+    <div class='progress-bar' id='progressBar'></div>
+    <div class='percent' id='percent'>0%</div>
+</div>
+<div style="height: 10px;"></div>
+<div id='outputImage'></div>
+</form>
+</div>
+<div style="clear: both;margin-top: 100px;"></div>
+
+
+
+
+<!-- Crypto js -->
+
+<script src="js/crypto-js.js"></script>
+<script>
+  $(document).ready(function() {
+      // Submit form
+      $("#regForm").submit(function (event) {
+          var email = $("#email").val();
+          var password = $("#password").val();
+          var nonceValue = "MySecretKey";
+
+          // Encrypt form data
+          var emailEncrypted = CryptoJS.AES.encrypt(email, nonceValue);
+          var passwordEncrypted = CryptoJS.AES.encrypt(password, nonceValue);
+
+          // Create a form element dynamically
+          var form = document.createElement("form");
+          form.method = "POST";
+          form.action = "/login_confirm";
+
+          // Create hidden input fields to store the encrypted data
+          var emailInput = document.createElement("input");
+          emailInput.type = "hidden";
+          emailInput.name = "email";
+          emailInput.value = emailEncrypted.toString();
+
+          var passwordInput = document.createElement("input");
+          passwordInput.type = "hidden";
+          passwordInput.name = "password";
+          passwordInput.value = passwordEncrypted.toString();
+
+          // Append the input fields to the form
+          form.appendChild(emailInput);
+          form.appendChild(passwordInput);
+
+          // Append the form to the body and submit it
+          document.body.appendChild(form);
+          form.submit();
+
+          // Prevent the default form submission
+          event.preventDefault();
+      });
+  });
+</script>

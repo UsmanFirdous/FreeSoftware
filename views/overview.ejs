@@ -1,0 +1,207 @@
+
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+
+<!-- Load miSlider -->
+<link href="css/mislider.css" rel="stylesheet">
+<link href="css/mislider-skin-cameo.css" rel="stylesheet">
+<script src="js/mislider.js"></script>
+
+<script>window.modernizr || document.write('<script src="js/modernizr-custom.js"><\/script>')</script>
+<script>
+    jQuery(function ($) {
+        var slider = $('.mis-stage').miSlider({
+            //  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+            //stageHeight: 380,
+            //  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+            slidesOnStage: false,
+            //  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+            slidePosition: 'center',
+            //  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+            slideStart: 'mid',
+            //  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+            slideScaling: 150,
+            //  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+            offsetV: -5,
+            //  Center slide contents vertically - Boolean. Default: false
+            centerV: true,
+            //  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+            navButtonsOpacity: 1
+        });
+    });
+</script>
+<link rel="stylesheet" href="js/jquery-ui.css">
+  
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+<script>
+  $(function(){
+$('#searchName').autocomplete({
+  source: function(req,res){
+    $.ajax({
+      url:"autocomplete/",
+      dataType:"jsonp",
+      type:"GET",
+      data:req,
+      success:function(data){
+    res(data);
+      },
+      error:function(err){
+        console.log(err.status);
+      }
+    });
+  },
+  minLength:1,
+  select:function(event,ui){
+    if(ui.item){
+      $('#searchName').text(ui.item.label);
+    }
+  }
+})
+  });
+</script>
+<style>
+  li{
+    margin-top: 8px;
+    
+  }
+  .overview{
+    background-color: #fb6340;
+    color: #FFF;
+  }
+  figcaption{
+      
+  }
+</style>
+<div style="margin:20px 0px 20px 20px;font-size: 16px; width: 900px;">
+  <div style="width:200px;margin:10px 0px 10px 0px;border:solid #fb6340;border-left:none;border-right:none;font-size:16px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+    Our Mission
+    </div>
+<div style="margin-left: 20px;">
+With USAF.Com.Pk our aim is to provide you with the simplest method of downloading the newest Cracked versions of the best software without any add and cast .
+</div>
+<div style="width:200px;margin:10px 0px 10px 0px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+  Services
+  </div>
+<ol type="i">
+  <li>Custom software development support like Web/Android/IOS/Windows</li>
+  <li>Mojorities of softwares are Cracked Version</li>
+<li>Only the best software, we focus on quality not quantity.</li>
+<li>Very fast servers with 100Mb connections, to make your downloads as fast as possible.</li>
+<li>We keep the old versions of programs, so if you update and don't like the new version, you can always return to the old one.</li>
+<li>All software is 100% spyware and virus free.</li>
+<li>Filtering feature to allow you to only show Freeware and/or Non-beta software.</li>
+<li>Full support for resuming downloads and download managers.</li>
+<li>Change log and technical details for downloads.</li>
+<li>RSS feeds for all updates, categories and for individual programs.</li>
+<li>New European and US download servers.</li>
+<li>
+  Optimized pages for faster browsing.</li>
+</ol>
+
+<div style="width:200px;margin:10px 0px 10px 0px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+ Team Members
+  </div>
+
+
+  <!--image slider--------------------------------->
+
+</div>
+
+<div style="margin:0px auto;width:980px;">
+  <div class="img-slider">
+  
+  <figure>
+      <div class="mis-stage">
+          <!-- The element to select and apply miSlider to - the class is optional -->
+          <ol class="mis-slider">
+              <!-- The slider element - the class is optional - Set width of slide using CSS on this element -->
+             
+              <li class="mis-slide">
+                <a href="#" class="mis-container">
+                  <figure>
+                      <img src="img/user.png" alt="Hidden Pond">
+                      <figcaption style="margin-top: 10px;font-size: 16px; font-weight: bold;">Mr.Besharat Hussain<br>(Project Supervisor)</figcaption>
+                      <br><br><br><br><br>
+                  </figure>
+                </a>
+            </li>
+             
+            <li class="mis-slide">
+              <a href="#" class="mis-container">
+                  <figure>
+                      <img src="img/user.png" alt="Hidden Pond">
+                      <figcaption style="margin-top: 10px;font-size: 16px; font-weight: bold;">Dr.Ihab Darwish<br>(Senior Advisor)</figcaption>
+                      <br><br><br><br><br>
+                  </figure>
+              </a>
+          </li>
+              <li class="mis-slide">
+                  <!-- A slide element - the class is optional -->
+                  <a href="#" class="mis-container">
+                      <!-- A slide container - this element is optional, if absent the plugin adds it automatically -->
+                      <figure>
+                          <!-- Slide content - whatever you want -->
+                          <img src="img/chand.jpg" alt="Pink Water Lillies">
+                          
+                          <figcaption style="margin-top: 10px;font-size: 16px; font-weight: bold;">Mr.Malik Usman<br>(CEO)</figcaption>
+                          <br><br><br><br><br>
+                      </figure>
+                      
+                  </a>
+              </li>
+              <li class="mis-slide">
+                <!-- A slide element - the class is optional -->
+                <a href="#" class="mis-container">
+                    <!-- A slide container - this element is optional, if absent the plugin adds it automatically -->
+                    <figure>
+                        <!-- Slide content - whatever you want -->
+                        <img src="img/no.jpeg" alt="Pink Water Lillies">
+                        
+                        <figcaption style="margin-top: 10px;font-size: 16px; font-weight: bold;">Noshin<br>(App Director)</figcaption>
+                        <br><br><br><br><br>
+                    </figure>
+                    
+                </a>
+            </li>
+              <li class="mis-slide">
+                  <a href="#" class="mis-container">
+                      <figure>
+                          <img src="img/usama.jpg" alt="Pond with Lillies">
+                          <figcaption style="margin-top: 10px;font-size: 16px; font-weight: bold;">Mr.Usama Akhtar<br>(Flutter Developer)</figcaption>
+                          <br><br><br><br><br>
+                      </figure>
+                  </a>
+              </li>
+              <li class="mis-slide">
+                  <a href="#" class="mis-container">
+                      <figure>
+                          <img src="img/user.png" alt="Hidden Pond">
+                          <figcaption style="margin-top: 10px;font-size: 16px; font-weight: bold;">Mr.Muhammad Shafique<br>(Marketing Manager)</figcaption>
+                          <br><br><br><br><br>
+                      </figure>
+                  </a>
+              </li>
+            
+             
+             
+              
+        
+              
+          </ol>
+           
+      </div>
+  
+  
+  
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+

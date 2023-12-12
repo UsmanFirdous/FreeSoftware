@@ -1,0 +1,80 @@
+
+
+  
+<div style="width: 700px; margin: 20px auto;">
+<img style="float: left;" src="<%=Windows[0].Icon%>">
+<p style="margin-left:10px;float: left;font-size: 18px;font-weight: bold;"><%= Windows[0].Title %> (Version=<%= Windows[0].Version%>)</p>
+</div>
+<div style="clear: both;"></div>
+<div style="clear: both;color:#a8a6a4; font-weight: bold; width: 690px; margin: 10px auto;">(<%=Windows[0].Date%>)</div> 
+
+<div style="clear: both;width:350px;margin:20px 0px 10px 20px;border:solid thin #fb6340;border-left:none;border-right:none;font-size:20px; border-radius:0px;padding:5px 0px 5px 25px;color:#000;">
+  For Windows OPerating System
+  </div>
+  <% if(Windows) {%>
+    <div style="width:500px;margin: 0px auto;"> 
+      <a id="no-link" class="btn" style="width: 500px; height:25px;text-align: center;text-decoration: none;font-size: 18px; font-weight: bold;" href="/download_windows/<%=Windows[0].uid %>">Click To Download Total Size  ( <%= Windows[0].Size%> MB )</a>
+  
+    </div>
+  <%} else { %>
+    <div style="width:400px; margin:0px auto"> 
+      <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+        <div style="font-size: 40px;">Oops!</div>
+        <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found for Windows</div>
+        <div"><img style="margin-bottom: -25px;;" src="img/cry.gif" width="100px" height="100px"></div>
+  </div>
+  <%}%>
+
+  <div style="clear: both;width:350px;margin:20px 0px 10px 20px;border:solid thin #fb6340;border-left:none;border-right:none;font-size:20px; border-radius:0px;padding:5px 0px 5px 25px;color:#000;">
+    For Linux OPerating System
+    </div>
+    <% if(Linux.length!=0) {%>
+      
+      <div style="width:500px;margin: 0px auto;"> 
+        <a id="no-link" class="btn" style="width: 500px; height:25px;text-align: center;text-decoration: none;font-size: 18px; font-weight: bold;" href="/download_linux/<%=Linux[0].uid %>">Click To Download Total Size  ( <%= Linux[0].Size%> MB )</a>
+    
+      </div>
+    <%} else { %>
+      <div style="width:400px; margin: 0px auto;"> 
+        <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+          <div style="font-size: 40px;">Oops!</div>
+          <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found for Linux</div>
+          <div"><img style="margin-bottom: -25px;;" src="img/cry.gif" width="100px" height="100px"></div>
+         
+    </div>
+    <%}%>
+
+    <div style="clear: both;width:350px;margin:20px 0px 10px 20px;border:solid thin #fb6340;border-left:none;border-right:none;font-size:20px; border-radius:0px;padding:5px 0px 5px 25px;color:#000;">
+      For Mac OPerating System
+      </div>
+      <% if(Mac.length!=0) {%>
+        <div style="width:500px;margin: 0px auto;"> 
+          <a id="no-link" class="btn" style="width: 500px; height:25px;text-align: center;text-decoration: none;font-size: 18px; font-weight: bold;" href="/download_mac/<%=Mac[0].uid%>">Click To Download Total Size  ( <%= Mac[0].Size%> MB )</a>
+      
+        </div>
+      <%} else { %>
+        <div style="width:400px; margin: 0px auto;"> 
+          <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+            <div style="font-size: 40px;">Oops!</div>
+            <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found for Mac</div>
+            <div"><img style="margin-bottom: -25px;;" src="img/cry.gif" width="100px" height="100px"></div>
+      </div>
+      <%}%>
+      <div style="clear: both;width:350px;margin:20px 0px 10px 20px;border:solid thin #fb6340;border-left:none;border-right:none;font-size:20px; border-radius:0px;padding:5px 0px 5px 25px;color:#000;">
+        For Android OPerating System
+        </div>
+        <% if(Apk.length!=0) {%>
+          <div style="width:500px;margin: 0px auto;"> 
+            <a id="no-link" class="btn" style="width: 500px; height:25px;text-align: center;text-decoration: none;font-size: 18px; font-weight: bold;" href="/download_android/<%=Apk[0].uid %>">Click To Download Total Size  ( <%= Apk[0].Size%> MB )</a>
+          </a>
+        
+          </div>
+        <%} else { %>
+          <div style="width:400px; margin: 0px auto;"> 
+            <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+              <div style="font-size: 40px;">Oops!</div>
+              <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found for Android</div>
+              <div"><img style="margin-bottom: -25px;;" src="img/cry.gif" width="100px" height="100px"></div>
+        </div>
+        <%}%>
+        <div style="clear: both;margin-top: 100px;"></div>

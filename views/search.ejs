@@ -1,0 +1,50 @@
+<div class="content">
+  <div style="width:600px;margin:10px 0px 10px 20px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+Search For <%= Type%> Software Key Word= (<%=Key%>)
+</div>
+<%if(Found.length!=0) {%>
+  <div style="font-size: 16px;font-weight: bold; margin: 5px 0px 5px 30px;color: #a8a6a4;">Total Record:(<%=Found.length%>)</div>
+<div style="width: 900px; margin:0px  auto;">
+  
+<div  style="width: 900px;float:left;font-weight: bold;">
+  <% for(var i=0 ; i < Found.length; i++) { %>
+       <div style="margin: 10px; padding-bottom: 5px; border:solid thin #fb6340; border-left:none;border-right:none;border-top:none;">
+       <img style="float: left;" src="<%= Found[i].Icon %>" width=45px height=45px>
+       <p class="papular"><%= Found[i].Title %> (<%=Found[i].Version %>)</p>
+       <div style="float: right;margin-top: 20px;">
+      <% if(Type=="Windows") {%>
+        
+        <a id="no-link" style="margin-top: 0px;"  class="download" href="download_windows/<%= Found[i].uid%>">Click to Download  Total Size <%=Found[i].Size  %> Mb</a>
+
+      <%}else if(Type=="Linux"){%>
+        <a id="no-link" style="margin-top: 0px;"  class="download" href="download_linux/<%= Found[i].uid%>">Click to Download  Total Size <%=Found[i].Size  %> Mb</a>
+      
+      <%}else if(Type=="Mac"){%>
+        <a id="no-link" style="margin-top: 0px;"  class="download" href="download_mac/<%= Found[i].uid%>">Click to Download  Total Size <%=Found[i].Size  %> Mb</a>
+      
+      <%}else if(Type=="APK"){%>
+        <a id="no-link" style="margin-top: 0px;"  class="download" href="download_android/<%= Found[i].uid%>">Click to Download  Total Size <%=Found[i].Size  %> Mb</a>
+      
+      <%}%>    
+      
+
+      </div>
+       <div style="clear: both;"></div>
+       <div style="clear: both;margin: 10px 0px 0px 20px;color:#a8a6a4; font-weight: bold;">(<%=Found[i].Date%>)</div> 
+      </div>
+
+
+    <% } %>
+    
+</div>
+<%} else {%>
+  <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+  <div style="font-size: 60px;">Oops!</div>
+  <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found please check your spelling and try agin</div>
+  <div"><img src="img/cry.gif" width="200px" height="200px"></div>
+  <div style="clear: both;color: red;"> </div>
+  
+  
+<% } %>
+<div style="clear:both; margin-top: 100px;"></div>
+</div>

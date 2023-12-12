@@ -1,0 +1,47 @@
+<style>
+  .windows{
+    background-color: #fb6340;
+    color: #FFF;
+  }
+</style>
+<div style="width:980px; margin: 0px auto;"> 
+  <p style="float: left;width:450px; margin:60px 0px 0px 50px;font-size: 22px; text-align: justify; ">
+    All types of<span style="color:#fb6340;"> Windows
+     softwares</span> are available,Most of the software are
+    Cracked version.
+  </p>
+  <img style="float: left;width:380px;margin-left: 35px;" src="img/windows.png" width="950px" height="220px"  />
+  <div style="clear: both;">
+  </div>
+<div class="content">
+  <div style="width:350px;margin:10px 0px 10px 20px;border:solid #fb6340;border-left:none;border-right:none;font-size:18px; font-weight:bold;background-color:#fb6340;border-radius: 20px 150px 20px 150px;padding:5px 0px 5px 25px;color:#FFF;">
+Papular Windows Softwares
+</div>
+<div style="font-size: 16px;font-weight: bold; margin: 5px 0px 5px 30px;color: #a8a6a4;">Total Record:(<%=Windows.length%>)</div>
+<div style="width: 900px; margin:0px  auto;">
+  <%if(Windows.length!=0) {%>
+<div  style="width: 900px;float:left;font-weight: bold;">
+  <% for(var i=0 ; i < Windows.length; i++) { %>
+       <div style="margin: 10px; padding-bottom: 5px; border:solid thin #fb6340; border-left:none;border-right:none;border-top:none;">
+       <img style="float: left;" src="<%= Windows[i].Icon %>" width=45px height=45px>
+       <p class="papular"><%= Windows[i].Title %> (<%=Windows[i].Version%>)</p>
+       <div style="float: right;margin-top: 20px;">
+      <a id="no-link" style="margin-top: 0px;"  class="download" href="download_windows/<%=Windows[i].uid%>">Click to Download  Total Size <%=Windows[i].Size  %> Mb</a>
+      </div>
+       <div style="clear: both;"></div>
+       <div style="clear: both;margin: 5px 0px 0px 20px;color:#a8a6a4;">(<%=Windows[i].Date%>)</div> 
+      </div>
+
+
+    <% } %>
+    <%} else {%>
+      <div class="error" style="margin-left: 50px ;background-color: #FFF;width: 500px;">
+        <div style="font-size: 60px;">Oops!</div>
+        <div style="color: red;font-size: 16px; font-weight: bold;">Sorry no record found!</div>
+        <div"><img src="img/cry.gif" width="200px" height="200px"></div>
+        <div style="clear: both;color: red;"> </div>
+        </div>
+    <% } %>
+    <div style="clear: both;margin-top: 100px;"></div>
+</div>
+</div>
